@@ -1,15 +1,18 @@
-def fizz_buzz(a)
-   if a % 15 == 0 
+def fizz_buzz(n)
+   if n % 15 == 0 
       'fizz_buzz'
-   elsif a % 5 == 0
+   elsif n % 5 == 0
        'buzz'
-   elsif a % 3 == 0
+   elsif n % 3 == 0
        'fizz'
    else
-      a.to_i
+      n.to_i
    end
 end
 
-   a = gets.to_i
+puts "数値を入力してください"
 
-   puts fizz_buzz(a)
+
+   n = gets.to_i
+
+   puts fizz_buzz(n)

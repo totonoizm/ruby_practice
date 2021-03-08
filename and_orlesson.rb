@@ -2,11 +2,11 @@ country = gets.chomp
 
 message =
   case country
-  when "japan"
+  when "1"
     'konn'
-  when 'us'
+  when '2'
     'hallo'
-  when 'italy'
+  when '3'
      'ciao'
   else 
     '?'
