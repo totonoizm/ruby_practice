@@ -1,13 +1,11 @@
-fruits = ['apple', 'orange','melon']
-numbers = [1,2,3]
-
-catch :done do
- fruits.shuffle.each do |fruit|
-    numbers.shuffle.each do |n|
-    puts "#{fruits}, #{n}"
-      if fruit == "orange" && n == 3
-        throw :done
-      end
-    end
+def calc_with_break
+  numbers = [1,2,3,4,5,6]
+  target = nil
+  numbers.shuffle.each do |n|
+    target = n
+    break if n.even? #breakで繰り返し処理を脱出
   end
+  target * 10
 end
+
+puts calc_with_break
