@@ -1,15 +1,18 @@
+puts "日本語でお住まいの国を入力してください"
 country = gets.chomp
 
 message =
   case country
-  when "1"
-    'konn'
-  when '2'
+  when "日本"
+    'こんにちは'
+  when 'アメリカ'
     'hallo'
-  when '3'
+  when 'フランス'
      'ciao'
   else 
-    '?'
+    "#{country}は未登録です"
   end
 
 puts message
+
+puts "さようなら"
