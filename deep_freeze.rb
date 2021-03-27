@@ -1,6 +1,16 @@
-class Team
-  COUNTRIES = deep_freeze(["Japn","US","India"])
+module Deep_freezeable
+  def deep_freeze(array_or_hash)
+    case array_or_hash
+    when Array
+      array_or_hash.each do |element|
+        element.freeze
+      end
+    when Hash
+      array_or_hash.each do |key, value|
+        key.freeze
+        value.freeze
+      end
+    end
+    array_or_hash.freeze
+  end
 end
-
-# 配列自身と配列の全要素がfreezeされている
-Team::COUNTRIES.frozen?
